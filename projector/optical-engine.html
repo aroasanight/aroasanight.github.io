@@ -117,7 +117,7 @@
         <p class="italic-note" style="text-align: center;">click/tap the images to add/remove labels :D</p>
         <img id="toggleImage1" class="toggle-image" src="https://aroasanight.github.io/projector/assets/labelled-optic-engine.jpeg" alt="Optic Engine (from the bottom)" onclick="toggleImageA()">
         <p class="italic-note" style="text-align: center;">note: you're looking at the bottom of the engine here, as there's more holes on this side</p>
-        <img id="toggleImage2" class="toggle-image" src="https://aroasanight.github.io/projector/assets/labelled-light-paths.jpeg" alt="Light Paths (from the top)" onclick="toggleImageB()">
+        <img id="toggleImage2" class="toggle-image" src="https://aroasanight.github.io/projector/assets/labelled-light-paths.png" alt="Light Paths (from the top)" onclick="toggleImageB()">
         <p class="italic-note" style="text-align: center;">...whereas this is from the top.</p>
 
         <div class="button-row">
@@ -143,9 +143,9 @@ function toggleImageA() {
 function toggleImageB() {
     const imgElement = document.getElementById("toggleImage2");
     if (BisImageOne) {
-        imgElement.src = "https://aroasanight.github.io/projector/assets/light-paths.jpeg"; // Replace with the second image's path
+        imgElement.src = "https://aroasanight.github.io/projector/assets/light-paths.png"; // Replace with the second image's path
     } else {
-        imgElement.src = "https://aroasanight.github.io/projector/assets/labelled-light-paths.jpeg"; // Replace with the first image's path
+        imgElement.src = "https://aroasanight.github.io/projector/assets/labelled-light-paths.png"; // Replace with the first image's path
     }
     BisImageOne = !BisImageOne; // Toggle the state
 }

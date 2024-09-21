@@ -115,9 +115,9 @@
         
         <!-- Image with toggle functionality -->
         <p class="italic-note" style="text-align: center;">click/tap the images to add/remove labels :D</p>
-        <img id="toggleImage1" class="toggle-image1" src="https://aroasanight.github.io/projector/assets/labelled-optic-engine.jpeg" alt="Optic Engine (from the bottom)" onclick="toggleImage()">
+        <img id="toggleImage1" class="toggle-image" src="https://aroasanight.github.io/projector/assets/labelled-optic-engine.jpeg" alt="Optic Engine (from the bottom)" onclick="toggleImageA()">
         <p class="italic-note" style="text-align: center;">note: you're looking at the bottom of the engine here, as there's more holes on this side</p>
-        <img id="toggleImage2" class="toggle-image2" src="https://aroasanight.github.io/projector/assets/labelled-light-paths.jpeg" alt="Light Paths (from the top)" onclick="toggleImage()">
+        <img id="toggleImage2" class="toggle-image" src="https://aroasanight.github.io/projector/assets/labelled-light-paths.jpeg" alt="Light Paths (from the top)" onclick="toggleImageB()">
         <p class="italic-note" style="text-align: center;">...whereas this is from the top.</p>
 
         <div class="button-row">
@@ -130,7 +130,7 @@
         let AisImageOne = true;
         let BisImageOne = true;
 
-function toggleImage() {
+function toggleImageA() {
     const imgElement = document.getElementById("toggleImage1");
     if (AisImageOne) {
         imgElement.src = "https://aroasanight.github.io/projector/assets/optic-engine.jpeg"; // Replace with the second image's path
@@ -140,14 +140,14 @@ function toggleImage() {
     AisImageOne = !AisImageOne; // Toggle the state
 }
 
-function toggleImage() {
+function toggleImageB() {
     const imgElement = document.getElementById("toggleImage2");
-    if (AisImageOne) {
+    if (BisImageOne) {
         imgElement.src = "https://aroasanight.github.io/projector/assets/light-paths.jpeg"; // Replace with the second image's path
     } else {
         imgElement.src = "https://aroasanight.github.io/projector/assets/labelled-light-paths.jpeg"; // Replace with the first image's path
     }
-    AisImageOne = !AisImageOne; // Toggle the state
+    BisImageOne = !BisImageOne; // Toggle the state
 }
     </script>
 </body>

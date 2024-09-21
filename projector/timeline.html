@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projector Timeline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        /* Use a system font fallback for better performance */
+        body {
+            font-family: 'Roboto Mono', monospace, 'Courier New', Courier, monospace;
+            background-color: #070707;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container to center content and set max width */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        p strong {
+            font-weight: bold;
+        }
+
+        p.italic-note {
+            font-style: italic;
+            color: #999999;
+        }
+
+        a {
+            color: #00b3b3;
+            text-decoration: underline;
+        }
+
+        .button-row {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .button {
+            background-color: #00b3b3;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .button:hover {
+            background-color: #008080;
+        }
+
+        /* Timeline container */
+        .timeline {
+            display: block; /* Ensure the events stack vertically */
+            position: relative;
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+
+        /* Timeline vertical line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 10px;
+            bottom: 0;
+            width: 2px;
+            background-color: #555555; /* Same grey color for line and circles */
+        }
+
+        /* Timeline circle */
+        .timeline-event {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #555555; /* Grey color for circle */
+            background-color: #070707; /* Matches the page background */
+        }
+
+        /* Connect the last event to the bottom of the timeline line */
+        .timeline-event:last-of-type::before {
+            top: 0;
+        }
+
+        /* Subtitle style for timeline events */
+        .event-subtitle {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #00b3b3;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .button {
+                padding: 10px 15px;
+            }
+
+            .timeline {
+                padding-left: 20px;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-event::before {
+                left: -22px;
+            }
+
+            .event-subtitle {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Projector Development Timeline</h1>
+
+        <div class="timeline">
+            <!-- Event 1 -->
+            <div class="timeline-event">
+                <h2 class="event-subtitle">Step One: Light Source</h2>
+                <p>A powerful light source emits a beam of intense, white light which passes through a light integrator rod, distributing light evenly.</p>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="timeline-event">
+                <h2 class="event-subtitle">Step Two: Color Separation</h2>
+                <p>White light is split into red, green, and blue beams using dichroic mirrors, which reflect specific wavelengths of light.</p>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="timeline-event">
+                <h2 class="event-subtitle">Step Three: LCD Processing</h2>
+                <p>The red, green, and blue beams pass through individual LCD screens, where liquid crystals manipulate light to form images in different brightnesses.</p>
+            </div>
+
+            <!-- Event 4 -->
+            <div class="timeline-event">
+                <h2 class="event-subtitle">Step Four: Image Recombination</h2>
+                <p>The colored images recombine in a dichroic prism to form a full-color image.</p>
+            </div>
+
+            <!-- Event 5 -->
+            <div class="timeline-event">
+                <h2 class="event-subtitle">Step Five: Projection</h2>
+                <p>The final image is projected through a lens and onto a screen, completing the projection process.</p>
+            </div>
+        </div>
+
+        <div class="button-row">
+            <a href="https://electronics.howstuffworks.com/lcd-projectors.htm#pt1" class="button">Source (howstuffworks.com)</a>
+            <a href="https://aroasanight.github.io/projector/" class="button">More about this projector</a>
+        </div>
+    </div>
+
+</body>
+</html>

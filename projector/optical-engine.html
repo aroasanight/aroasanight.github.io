@@ -87,9 +87,10 @@
 
         /* Style for the image */
         .toggle-image {
-            max-width: 500px;
+            max-width: 90%; /* Set max width relative to its container */
+            width: 500px; /* Maintain a maximum width for larger screens */
             display: block;
-            margin: 20px auto; /* Center the image */
+            margin: 20px auto; /* Center the image with automatic margins */
             cursor: pointer; /* Change cursor to pointer */
         }
     </style>
@@ -116,7 +117,7 @@
         <!-- Image with toggle functionality -->
         <p class="italic-note" style="text-align: center;">click/tap the images to add/remove labels :D</p>
         <img id="toggleImage1" class="toggle-image" src="https://aroasanight.github.io/projector/assets/labelled-optic-engine.jpeg" alt="Optic Engine (from the bottom)" onclick="toggleImageA()">
-        <p class="italic-note" style="text-align: center;">note: you're looking at the bottom of the engine here, as there's more holes on this side</p>
+        <p class="italic-note" style="text-align: center;">note: you're looking at the bottom of the engine here (above), as there's more holes on this side</p>
         <img id="toggleImage2" class="toggle-image" src="https://aroasanight.github.io/projector/assets/labelled-light-paths.png" alt="Light Paths (from the top)" onclick="toggleImageB()">
         <p class="italic-note" style="text-align: center;">...whereas this is from the top.</p>
 
@@ -130,25 +131,25 @@
         let AisImageOne = true;
         let BisImageOne = true;
 
-function toggleImageA() {
-    const imgElement = document.getElementById("toggleImage1");
-    if (AisImageOne) {
-        imgElement.src = "https://aroasanight.github.io/projector/assets/optic-engine.jpeg"; // Replace with the second image's path
-    } else {
-        imgElement.src = "https://aroasanight.github.io/projector/assets/labelled-optic-engine.jpeg"; // Replace with the first image's path
-    }
-    AisImageOne = !AisImageOne; // Toggle the state
-}
+        function toggleImageA() {
+            const imgElement = document.getElementById("toggleImage1");
+            if (AisImageOne) {
+                imgElement.src = "https://aroasanight.github.io/projector/assets/optic-engine.jpeg"; // Replace with the second image's path
+            } else {
+                imgElement.src = "https://aroasanight.github.io/projector/assets/labelled-optic-engine.jpeg"; // Replace with the first image's path
+            }
+            AisImageOne = !AisImageOne; // Toggle the state
+        }
 
-function toggleImageB() {
-    const imgElement = document.getElementById("toggleImage2");
-    if (BisImageOne) {
-        imgElement.src = "https://aroasanight.github.io/projector/assets/light-paths.png"; // Replace with the second image's path
-    } else {
-        imgElement.src = "https://aroasanight.github.io/projector/assets/labelled-light-paths.png"; // Replace with the first image's path
-    }
-    BisImageOne = !BisImageOne; // Toggle the state
-}
+        function toggleImageB() {
+            const imgElement = document.getElementById("toggleImage2");
+            if (BisImageOne) {
+                imgElement.src = "https://aroasanight.github.io/projector/assets/light-paths.png"; // Replace with the second image's path
+            } else {
+                imgElement.src = "https://aroasanight.github.io/projector/assets/labelled-light-paths.png"; // Replace with the first image's path
+            }
+            BisImageOne = !BisImageOne; // Toggle the state
+        }
     </script>
 </body>
 </html>
